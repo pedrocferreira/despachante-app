@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content fullscreen>
+  <div class="container">
+    <form #form="ngForm">
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text" name="email" [(ngModel)]= "user.email" #email="ngModel" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required></ion-input>
+      </ion-item>
+    <ion-item *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
+      O campo é obrigatório
+    </ion-item>
+
+      <div>
+        <p>Esqueceu a senha ? </p>
+      </div>
+      <div class="redefinir"> <b><p href="">Redefinir a senha!</p></b> </div>
+
+    </ion-list>
+<button ion-button block color="primary" [disabled]="!form.form.valid" (click)="signIn()">
+  Entrar
+</button>
+
+<button ion-button block clear (click)="criarConta()">
+  Criar Conta
+</button>
+</form>
+
+
+  </div>
+</ion-content>

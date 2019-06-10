@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ClientePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar navbar-right color="danger">
+    <ion-buttons start class="toggle">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Clientes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<!--Lista de clientes -->
+
+
+
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <!----<ion-item-sliding *ngFor="let conta of orcamento">
+            <ion-item>
+              Placa : {{conta.placa}}<br>
+              Valor Total:R${{conta.valorTotal}}<br>
+              Lucro:R$ {{conta.lucro}}
+
+            </ion-item> -->
+            <ion-item-options>
+              <button ion-button color="danger">Excluir</button>
+
+            </ion-item-options>
+
+          <!----</ion-item-sliding> --> 
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="openaddCliente()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

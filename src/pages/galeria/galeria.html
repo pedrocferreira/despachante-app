@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar navbar-right color="danger">
+    <ion-buttons start class="toggle">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Galeria
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content >
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 *ngFor="let item of valor|async" class="fotos">
+        <ion-item>
+          <img src="https://firebasestorage.googleapis.com/v0/b/scaj-fotos.appspot.com/o/{{item.url}}?alt=media&token=64c4bc44-2127-48b9-b29b-b7776d1bc3f8"
+            #myImage (click)="presentImage(myImage)">
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

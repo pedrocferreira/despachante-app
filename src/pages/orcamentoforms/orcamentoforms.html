@@ -1,0 +1,48 @@
+<!--
+  Generated template for the OrcamentoformsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Orçamento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<!-- Valor dos debitos 
+    Placa Veiclo
+    Renavam
+    Valo autenticado 
+     lucro = valor dos Devitos + Valor trabiti (valor que vem pro paramentro da pagina de orcamento) - valor autenticado 
+-->
+
+<ion-content padding>
+  <form #f="ngForm" >
+  <ion-item ngModel name="1">
+    <ion-label floating> Debitos no DETRAN</ion-label>
+    <ion-input  (keyup)="onKeydebDetran($event)" type="number"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item ngModel name="2">
+    <ion-label floating> Placa do Veiuclo</ion-label>
+    <ion-input type="text" maxlength="7" minlength="7" (keyup)="onKeyplacaVeiuclo($event)"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item ngModel name="3">
+    <ion-label floating> Renavam</ion-label>
+    <ion-input type="number" (keyup)="onKeyrenavam($event)"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item ngModel name="4">
+    <ion-label floating> Valor que vai ser autenticado </ion-label>
+    <ion-input type="number" (keyup)="onKeyvalorAut($event)" ></ion-input>
+  </ion-item>
+  <ion-item ngModel name="5">
+    <ion-label floating> Cliente </ion-label>
+    <ion-input type="number" (keyup)="onKeyConta($event)"></ion-input>
+  </ion-item>
+  <button ion-button full type="submit" (click)="postDataa()">Salvar</button>
+</form>
+</ion-content>

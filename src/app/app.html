@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+<ion-content padding>
+    <h4>Menu</h4>
+    <ion-list>
+
+        <button ion-item (click)="gotohome()" >
+            Home
+        </button>  
+        <button ion-item (click)="goClientes()">
+            Clientes
+        </button>
+        <button ion-item (click)="gotoOrcamento()">
+            Calcular
+        </button>
+        <button ion-item (click)="goContas()">
+            Orçamentos Feitos
+        </button>
+
+        <button>
+            
+        </button>
+
+    </ion-list>
+
+    
+</ion-content>
+    </ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

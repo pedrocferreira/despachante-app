@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar navbar-right color="danger">
+    <ion-buttons start class="toggle">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Orçamentos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+
+  <ion-card (click)="gotoMoto()">
+    <img src="assets/imgs/orcamentos/motos.jpg" />
+    <div class="card-title">Moto</div>
+  </ion-card>
+
+  <ion-card (click)="gotoCarro()">
+    <img src="assets/imgs/orcamentos/veiculo.png" />
+    <div class="card-title">Veiculo</div>
+
+  </ion-card>
+
+  <ion-card (click)="gotoCaminhao()">
+    <img src="assets/imgs/orcamentos/caminhao.jpg" />
+    <div class="card-title">Caminhao</div>
+
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/orcamentos/onibus.jpg" />
+    <div class="card-title">Onibus</div>
+
+  </ion-card>
+  <ion-card>
+    <img src="assets/imgs/orcamentos/reboque.jpg" />
+    <div class="card-title">Reboque</div>
+
+  </ion-card>
+
+</ion-content>

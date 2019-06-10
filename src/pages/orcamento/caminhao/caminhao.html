@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-navbar navbar-right color="danger">
+    <ion-buttons start class="toggle">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Caminhão
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onsubmit(f)">
+
+
+
+
+    <ion-label>Ano de Fabricação</ion-label>
+    <ion-select id="anoID" ngModel name="1">
+      <ion-option *ngFor="let ano of anos" value="{{ano.id}}">{{ano.id}}</ion-option>
+
+    </ion-select>
+
+
+    <br>
+    <br>
+
+
+
+    <h5>Troca de município ou alteraçao de Característica </h5>
+    <ion-list radio-group ngModel name="3">
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio value="sim"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio value="nao"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+
+
+
+
+    <h5>Pedir segunda via do CRV/CRLV</h5>
+    <ion-list radio-group ngModel name="4">
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio value="sim"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio value="nao"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+
+    <h5>Comunicação de venda</h5>
+    <ion-list radio-group ngModel name="5">
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio value="sim"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio value="nao"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+
+
+    <h5>Tarja</h5>
+    <ion-list radio-group ngModel name="6">
+      <ion-item>
+        <ion-label>Sim</ion-label>
+        <ion-radio value="sim"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio value="nao"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+
+    <h5>Placa nova</h5>
+    <ion-list radio-group ngModel name="7">
+      <ion-item>
+        <ion-label>Uma placa</ion-label>
+        <ion-radio value="uma"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Duas placas</ion-label>
+        <ion-radio value="duas"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Não</ion-label>
+        <ion-radio value="nao"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+    <button ion-button full type="submit" >Calcular</button>
+  </form>
+</ion-content>
+

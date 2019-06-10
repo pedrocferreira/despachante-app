@@ -1,0 +1,7 @@
+{
+  "name": "SCAJ-fotos",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,58 @@
+
+
+<ion-header>
+  <ion-navbar navbar-right color="danger">
+    <ion-buttons start class="toggle" >
+      <button ion-button icon-only menuToggle >
+      <ion-icon name="menu"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Tirar Foto 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="form" #f="ngForm" (ngSubmit)="takePhoto(f)">
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.name.valid && (form.controls.name.dirty || form.controls.name.touched)" color="danger">
+      <div [hidden]="!form.controls.name.errors.required">
+        O campo é obrigatório
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="tel" formControlName="tel"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched)" color="danger">
+      <div [hidden]="!form.controls.tel.errors.required">
+        O campo é obrigatório
+      </div>
+    </ion-item>
+    <ion-list>
+      
+        <ion-item name="descricao">
+          <ion-label stacked>frome um nome para o arquivo, nao pode ter espasso e nem caracter especial </ion-label>
+          <ion-input (keyup)="onKeyup($event)" type="text" formControlName="descricao"  ></ion-input>
+        </ion-item>
+
+        
+        
+      </ion-list>
+
+ <button ion-button  type="submit" >Tirar Foto</button>
+  </form>   
+   <div padding>
+     
+      <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()" (click)="takePhoto()" >Salvar</button>
+    </div>
+
+
+
+    
+</ion-content>

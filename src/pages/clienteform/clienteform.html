@@ -1,0 +1,70 @@
+<!--
+  Generated template for the ClienteformPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar navbar-right color="danger">
+    <ion-buttons start class="toggle">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+
+      </button>
+    </ion-buttons>
+    <ion-title class="titulo">
+      Clientes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-content padding>
+    <form #f="ngForm">
+        <ion-item ngModel name="1">
+          <ion-label floating> Nome </ion-label>
+          <ion-input (keyup)="registerNome($event)" type="text"></ion-input>
+        </ion-item>
+    </form>
+
+        <form #f="ngForm">
+          <ion-item ngModel name="1">
+            <ion-label floating> CPF </ion-label>
+            <ion-input (keyup)="registerCPF($event)" type="number"></ion-input>
+          </ion-item>
+        </form>
+
+            <form #f="ngForm">
+              <ion-item ngModel name="1">
+                <ion-label floating> Placa </ion-label>
+                <ion-input (keyup)="registerPlaca($event)" type="text"></ion-input>
+              </ion-item>
+            </form>
+
+                <form #f="ngForm">
+                  <ion-item ngModel name="1">
+                    <ion-label floating> Pagou </ion-label>
+                    <ion-input (keyup)="registerPagou($event)" type="number"></ion-input>
+                  </ion-item>
+                </form>
+
+                    <form #f="ngForm">
+                      <ion-item ngModel name="1">
+                        <ion-label floating> Recebeu </ion-label>
+                        <ion-input (keyup)="registerRecebeu($event)" type="text"></ion-input>
+                      </ion-item>
+                    </form>
+
+                        <form #f="ngForm">
+                          <ion-item ngModel name="1">
+                            <ion-label floating> Nota </ion-label>
+                            <ion-input (keyup)="registerNota($event)" type="text"></ion-input>
+                          </ion-item>
+
+                            <button ion-button full type="submit" (click)="postDataa()">Salvar</button>
+                        </form>
+  </ion-content>
+
+</ion-content>
