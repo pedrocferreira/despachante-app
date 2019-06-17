@@ -7,7 +7,16 @@
 <ion-header>
 
   <ion-navbar color="danger">
-    <ion-title>Orçamento</ion-title>
+    <ion-title *ngIf="searchBar">
+      Orçamento
+    </ion-title>
+    <ion-searchbar *ngIf="searchBar" showCancelButton="true" (ionCancel)="searchBar = false"></ion-searchbar>
+    
+    <ion-buttons end>
+      <button ion-button icon-only *ngIf="!searchBar" (click)="searchBar">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

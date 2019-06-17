@@ -1,19 +1,17 @@
 <ion-header>
-  <ion-navbar navbar-right color="danger">
-    <ion-buttons start class="toggle">
-      <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
 
-      </button>
-    </ion-buttons>
-    <ion-title class="titulo">
-      Orçamentos
+  <ion-navbar color="danger">
+    <ion-title *ngIf="!searchBar">
+      contas
     </ion-title>
+    
   </ion-navbar>
+
 </ion-header>
 
 
 <ion-content>
+  <ion-searchbar (ionInput)="getItem($event)"></ion-searchbar>
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -27,6 +25,7 @@
             </ion-item>
             <ion-item-options>
               <button  ion-button color="danger"  (click)="delet(conta.id)" >Excluir</button>
+              <button ion-button color="danger" (click)="delet(conta.id)">Editar</button>
        
             </ion-item-options>
       

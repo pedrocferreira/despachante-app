@@ -1,3 +1,4 @@
+import { initializeApp } from 'firebase';
 
 import { Entrada } from './../../modelos/entrada';
 import { ListContasProvider } from './../../providers/list-contas/list-contas';
@@ -27,12 +28,18 @@ export class ContasPage {
   servico : number = 160 ;
   data: Observable<any>;
   data2: Observable<any>;
+ 
+
+
+  public searchBar = true;
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public http: HttpClient,
     public alertCtrl: AlertController,
     public orcamentosService: ListContasProvider,
     private loadingCtrl: LoadingController,
     ) {
+
+      
       this.lucro2();
 
 
@@ -134,6 +141,21 @@ export class ContasPage {
 
   
 
+  }
+
+  
+
+  getItem(ev: any){
+   
+
+    let val = ev.target.value;
+
+    if (val && val.trim() !='') {
+      this.orcamento = this.orcamento.filter((item)=>{
+        return (item.placa.toLowerCase().indexOf(val.toLowerCase())> -1);
+      })
+      
+    }
   }
   
 
